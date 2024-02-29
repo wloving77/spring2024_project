@@ -1,0 +1,77 @@
+//file for styling the carousel onn index.html: 
+
+@carousel-primary-color: #265d81; 
+
+
+.border-radius-mixin(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+  }
+
+.carousel-item {
+
+    height: 600px; 
+    width: 100%;
+
+    img {
+        object-position:top;
+    }
+
+    .carousel-caption {
+        display: flex;
+        flex-wrap: wrap;
+        .border-radius-mixin(10px);
+        background-color: @carousel-primary-color;
+    }
+}
+
+
+
+
+.descriptions {
+
+  display: flex;
+  flex-wrap: wrap;
+
+  .description-item {
+
+    .border-radius-mixin(10px);
+    background-color: @carousel-primary-color;
+    padding: 15px;
+    margin: 25px;
+    color: white;
+    width: 100%;
+
+    p {
+      white-space: normal;
+    }
+
+  }
+}
+
+@media (min-width: 768px) {
+
+  .descriptions {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+}
+
+.signup-login-banner {
+
+  .border-radius-mixin(10px);
+
+  background-color: @carousel-primary-color;
+  color: white;
+
+  padding: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  text-align: center;
+  justify-content: center;
+
+}
